@@ -1,3 +1,9 @@
+# revision 21129
+# category Package
+# catalog-ctan /fonts/ps-type1/mathabx
+# catalog-date 2011-01-19 07:58:01 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-mathabx-type1
 Version:	20110119
 Release:	1
@@ -61,6 +67,7 @@ This is an Adobe Type 1 outline version of the mathabx fonts.
 %{_texmfdistdir}/fonts/type1/public/mathabx-type1/mathx8.pfb
 %{_texmfdistdir}/fonts/type1/public/mathabx-type1/mathx9.pfb
 %doc %{_texmfdistdir}/doc/fonts/mathabx-type1/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -71,3 +78,5 @@ This is an Adobe Type 1 outline version of the mathabx fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
