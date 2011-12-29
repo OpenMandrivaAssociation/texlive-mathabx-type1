@@ -18,25 +18,16 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires:	texlive-mathabx
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
 This is an Adobe Type 1 outline version of the mathabx fonts.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -68,7 +59,6 @@ This is an Adobe Type 1 outline version of the mathabx fonts.
 %{_texmfdistdir}/fonts/type1/public/mathabx-type1/mathx8.pfb
 %{_texmfdistdir}/fonts/type1/public/mathabx-type1/mathx9.pfb
 %doc %{_texmfdistdir}/doc/fonts/mathabx-type1/README
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -79,5 +69,3 @@ This is an Adobe Type 1 outline version of the mathabx fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
