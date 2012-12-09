@@ -69,3 +69,17 @@ This is an Adobe Type 1 outline version of the mathabx fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20110119-2
++ Revision: 753770
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110119-1
++ Revision: 718964
+- texlive-mathabx-type1
+- texlive-mathabx-type1
+- texlive-mathabx-type1
+- texlive-mathabx-type1
+
