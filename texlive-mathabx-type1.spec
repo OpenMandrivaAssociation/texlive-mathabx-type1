@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-mathabx-type1
 Version:	20110119
-Release:	2
+Release:	3
 Summary:	Outline version of the mathabx fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/ps-type1/mathabx
