@@ -3,7 +3,7 @@ Version:	21129
 Release:	2
 Summary:	Outline version of the mathabx fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/ps-type1/mathabx
+URL:		https://www.ctan.org/tex-archive/fonts/ps-type1/mathabx
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mathabx-type1.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mathabx-type1.doc.r%{version}.tar.xz
