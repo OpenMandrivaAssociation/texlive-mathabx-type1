@@ -13,8 +13,16 @@ Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/mathabx-type1.do
 BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(mathabx)
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 This is an Adobe Type 1 outline version of the mathabx fonts.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from mathabx-type1:
+Map mathabx.map
+TL_DROPIN_EOF
